@@ -43,20 +43,25 @@ nav img {
 }
 
 .intro {
+    padding-top: 90px;
     padding-left: 70px;
     height: 300px;
-    /* width: 500px; */
-    width: 100%;
+    width: 500px;
     /* background-color: red; */
     font-size: 45px;
     text-align: left;
 }
-.intro .strong {
+.strong {
     color: white;
 }
-.dark .intro .strong {
+.dark .strong {
     color: #FAFC55;
 }
+
+.me {
+    padding-right: 30px;
+}
+
 .wave {
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s;        /* Change to speed up or slow down */
@@ -75,37 +80,11 @@ nav img {
   100% { transform: rotate( 0.0deg) }
 }
 
-.typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-  }
-
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: blue; }
-  }
-
-.me {
-    height: 300px;
-    width: 500px;
-    /* background-color: blue; */
-    text-align: center;
-}
-
 @media screen and (max-width: 1000px) {
     .career {
         display: none;
+    }
+    .me {
+        margin-top: 100px;
     }
 }
