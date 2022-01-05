@@ -93,23 +93,24 @@ nav img {
     height: 600px;
     display: flex;
     justify-content: space-between;
-    background: green;
+    
     flex-wrap: wrap;
 }
 
 .avatar {
     margin-top: 50px;
-    margin-left: 30px;
-    height: 300px;
-    width: 30%;
-    background: red;
+    margin-left: 50px;
 }
 
 #about .intro {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    background: blue;
+    width: 70%;
+    
+}
+#about .intro .heading {
+    display: flex;
+    justify-content: center;
 }
 #about .intro .heading h1 {
     margin: 0px 30px;
@@ -133,12 +134,11 @@ nav img {
         height: 380px;
         width: 300px;
     }
-    .meLogo {
-        width: 250px;
-        height: 250px;
-        margin-right: 30px;
+    #about {
+        justify-content: center;
+        margin-right: 50px;
     }
-    .aboutIntro h1 {
-        margin: 0px 50px;
+    #about .intro .heading{
+        margin-left: 55px;;
     }
 }
