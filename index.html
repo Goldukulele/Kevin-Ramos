@@ -14,7 +14,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
-<body class="dark"> 
+<body class="dark" id="start"> 
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand ml-5" href="#">
             <div class="nav-name">
@@ -30,6 +30,9 @@
         
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+                <li class="nav-item active ml-4 mr-4">
+                    <a class="nav-link" href="#start">Home</a>
+                </li>                
                 <li class="nav-item active ml-4 mr-4">
                     <a class="nav-link" href="#about">About</a>
                 </li>
@@ -51,7 +54,7 @@
         <div class="star1 fade-in"> </div>
         <div class="star2 fade-in"> </div>
         <div class="box"> 
-            <div id="about">
+            <div id="home">
                 <div class="intro">
                     <p>Hi there! <span class="wave">👋</span></p>
                     <p>I'm <span class="name strong">Kevin Ramos</span></p>
@@ -60,7 +63,17 @@
                     </div>
                 </div>
                 <div class="me">
-                    <img src="images/me.jpg" height="450px" width="450px" alt="">
+                    <img src="images/kev_portrait.jpg" height="550px" width="440px" alt="">
+                </div>
+            </div>
+            <div id="about">
+                <div class="avatar">
+                    <img src="images/avatar.xcf" alt="">
+                </div>
+                <div class="intro">
+                    <div class="heading">
+                        <h1>ALLOW ME TO<strong><span class="strong"> INTRODUCE </span></strong>MYSELF</h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,7 +93,7 @@
         }
 
         document.addEventListener('DOMContentLoaded',function(event){
-            var dataText = [ "Full-Stack Developer      ", "Dancer            ", "Gamer           ", "Snowboarder      ", "Your new Member          "];
+            var dataText = [ "Full-Stack Developer      ", "Dancer            ", "Gamer           ", "Snowboarder      ", "Your new Team Member          "];
             function typeWriter(text, i, fnCallback) {
                 if (i < (text.length)) {
                     document.querySelector("#myTypewriter").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
