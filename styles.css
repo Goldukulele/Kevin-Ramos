@@ -1,27 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Patua One', cursive;
 }
-
-img {
+nav {
+    font-family: 'Patua One', cursive;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
+}
+nav img {
     border-radius: 50%;
 }
+.nav-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    font-size: 25px;
+}
 .box {
+    margin-top: 100px;
     position: absolute;
-   
-    margin-left: 20%;
+    margin-left: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    width: 60%;
-    background-color: brown;
-    
+    width: 70%;
 }
 
-.about {
+#about {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    width: 100%;
+    flex-wrap: wrap;
+    /* background-color: green; */
+}
+
+.intro {
+    padding-left: 70px;
+    height: 300px;
+    /* width: 500px; */
+    width: 100%;
+    /* background-color: red; */
+    font-size: 45px;
+    text-align: left;
+}
+.intro .strong {
+    color: white;
+}
+.dark .intro .strong {
+    color: #FAFC55;
+}
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: blue; }
+  }
+
+.me {
+    height: 300px;
+    width: 500px;
+    /* background-color: blue; */
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .career {
+        display: none;
+    }
 }

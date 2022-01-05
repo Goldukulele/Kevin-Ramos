@@ -1,17 +1,18 @@
 .scene {
     position: relative;
-    height: 400vh;
+    height: 100vh;
     overflow-x: hidden;
     background: #a6d8ff;
 }
 
 .dark .scene {
     background: #222833;
+    color: white;
 }
 
 .sun {
     position: fixed;
-    top: 200px;
+    top: 250px;
     left: 90%;
     transform: translateX(-50%);
     width: 100px;
@@ -26,6 +27,7 @@
 .dark .sun {
     Left: 10%;
     box-shadow: 0 0 0 #fff;
+    background: #FAFC55;
 }
 
 .dark .sun::before{
@@ -70,27 +72,27 @@
     width: 3px;
     height: 3px;
     background: #fff;
-    top: 120px;
-    left: 100px;
+    top: 200px;
+    left: 300px;
     border-radius: 30%;
     opacity: .8;
     -webkit-animation: fadeInOut2 1s infinite;
     animation: fadeInOut2 1s infinite ;
 }
 
-  @-webkit-keyframes fadeInOut2 {
+@-webkit-keyframes fadeInOut2 {
     0%   { opacity:1; }
     50%  { opacity:0.1; }
     100% { opacity:1; }
   }
   
-  @keyframes fadeInOut2 {
+@keyframes fadeInOut2 {
     0%   { opacity:1; }
     50%  { opacity:0.1; }
     100% { opacity:1; }
   }
 
-  @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .sun {
          width: 70px;
          height: 70px
