@@ -13,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/65b851e644.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="dark" id="start"> 
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
@@ -31,13 +33,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
                 <li class="nav-item active ml-4 mr-4">
-                    <a class="nav-link" href="#start">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>                
                 <li class="nav-item active ml-4 mr-4">
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item active ml-4 mr-4">
-                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item active ml-4 mr-4">
                     <a class="nav-link" href="#connect">Connect</a>
@@ -74,6 +76,50 @@
                     <div class="heading">
                         <h1>ALLOW ME TO<strong><span class="strong"> INTRODUCE </span></strong>MYSELF</h1>
                     </div>
+                    <div class="info">
+                        <p>Just a <span class="strong"> dancer </span> who found the truth of his life wrapped inside a h1 tag.</p>
+                        <p>I am currently a Full-Stack C# developer at <span class="strong">IMD Path</span>, where I developed and now maintaining our own LIMS (Laboratory Information Management System) software.</p>
+                        <p>I began my background working in the <span class="strong">lab</span> and as a <span class="strong">Disney entertainer</span>, but I found my passion in <span class="strong">coding</span>!
+                          The aspect of creating, designing, and complex problem solving in <span class="strong">Web Development</span> just brings me a certain satisfaction and joy you don't get any where else. 
+                          Currently, I have strong hands on experience with three different Full-Stack languages: <span class="strong">Node.js</span>
+                         , <span class="strong">Ruby on Rails</span>, and <span class="strong">C# .NET</span>. I'm always striving to learn!</p>
+                        <p>...but at the end of the day, what I really am is a dude from the Bay just looking to <span class="strong">dance</span> the night away! Have fun exploring and thanks for stopping by!</p>
+                        <p>P.S. Try clicking on the <span class="strong moon" id="sunOrMoon"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div id="projects">
+                <div class="project1">
+                    <img src="images/grammable.png" alt="">
+                    <div class="info">
+                        <div class="header">
+                            <h1 class="strong">Grammable</h1>
+                        </div>
+                        <div class="details"> 
+                            <p>An Instagram like clone created on Ruby on Rails. It does everything Instagram can! Users can sign up/sign in, create and share posts while also having the ability to edit or destroy those same contents.
+                                Other users can also share their own comments from other user's posts. Check it out!
+                            </p>
+                        </div>
+                        <a href="https://grammable-kevin-ramos.herokuapp.com/"><button>Website</button></a>
+                    </div>
+                </div>
+                <div class="project2">
+                    <img src="images/rockpaperscissors.png" alt="">
+                    <div class="info">
+                        <div class="header">
+                            <h1 class="strong">Rock Paper Scissors</h1>
+                        </div>
+                        <div class="details"> 
+                            <p>A super simple Rock Paper Scissors game with the focus on Javascript DOM manipulation. This is a quick project but had a ton of fun making it. I emphasized on creativity
+                               and wanted to turn something simple to make into something fun and easy to play. Come play against a CPU!</p>
+                        </div>
+                        <a href="https://goldukulele.github.io/rock-paper-scissor/"><button>Website</button></a>
+                </div>
+            </div>
+            <div id="connect">
+                <div><h1>FIND <span class="strong">ME</span> ON</h1></div>
+                <div class="media">
+                    <div class="fa-brands fa-linkedin-in"></div>
                 </div>
             </div>
         </div>
@@ -84,12 +130,16 @@
         const sun = document.querySelector('.sun');
         const body = document.querySelector('body');
         const nav = document.querySelector('nav');
+        const sunOrMoon = document.querySelector('#sunOrMoon');
+
         sun.onclick = function(){
-            body.classList.toggle('dark')
-            nav.classList.toggle('navbar-dark')
-            nav.classList.toggle('bg-dark')
-            nav.classList.toggle('navbar-light')
-            nav.classList.toggle('bg-light')
+            body.classList.toggle('dark');
+            nav.classList.toggle('navbar-dark');
+            nav.classList.toggle('bg-dark');
+            nav.classList.toggle('navbar-light');
+            nav.classList.toggle('bg-light');
+            sunOrMoon.classList.toggle('moon');
+            sunOrMoon.classList.toggle('sun1');
         }
 
         document.addEventListener('DOMContentLoaded',function(event){
