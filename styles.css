@@ -5,7 +5,37 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
 }
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+.dark .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #FAFC55;
+}
 
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.dark .hover-underline-animation:after {
+    background-color: #FAFC55;
+}
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 nav {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
 }
@@ -32,28 +62,26 @@ nav img {
     align-items: center;
     width: 70%;
     height: auto;
-    gap: 200px;
+    gap: 400px;
     flex-wrap: wrap;
 }
 
 #home {
     display: flex;
     justify-content: space-between;
-    height: 500px;
     width: 100%;
     flex-wrap: wrap;
 }
 
 #about {
     width: 100%;
-    height: 600px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 #projects {
-    margin-top: 80px;
+    margin-top: 40px;
     width: 100%;
     height: auto;
     display: flex;
@@ -68,7 +96,7 @@ nav img {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 120px;
     margin-bottom: 80px;
     gap: 50px;
     flex-wrap: wrap;
@@ -191,7 +219,10 @@ nav img {
     font-size: 17px;
     text-align: left;
 }
-
+#projects a {
+    height: 50px;
+    width: 120px;
+}
 a button {
     background-color: #3882F6;
     color: #F9FAF8;
@@ -228,7 +259,7 @@ a button {
         display: none;
     }
     .box {
-        gap: 600px;
+        gap: 200px;
     }
     .me {
         margin-top: 240px;
@@ -247,10 +278,18 @@ a button {
         justify-content: center;
         margin-right: 50px;
         gap: 70px;
-        margin-bottom: 200px;
     }
     .avatar {
         margin-right: 50px;
+    }
+    #connect {
+        justify-content: center;
+    }
+    #connect .find {
+        margin-right: 45px;
+    }
+    #connect .media {
+        margin-left: 14px;
     }
 }
 
@@ -275,11 +314,8 @@ a button {
 }
 
 @media screen and (max-width: 700px) {
-    #about {
-        margin-bottom: 800px;
-    }
+
     #projects{
-        margin-top: 200px;
         width: 100%;
         gap: 100px;
     }
@@ -294,8 +330,8 @@ a button {
     }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     #about {
-        margin-bottom: 1000px;
+        margin-bottom: 200px;
     }
-}
+} */
