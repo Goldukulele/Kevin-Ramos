@@ -5,6 +5,10 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
 }
+
+body {
+    overflow: hidden;
+}
 .hover-underline-animation {
     display: inline-block;
     position: relative;
@@ -69,12 +73,12 @@ nav img {
 #home {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     flex-wrap: wrap;
+    gap: 200px;
 }
 
 #about {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -189,7 +193,7 @@ nav img {
 }
 
 .project1, .project2 {
-    width: 90%;
+    gap: 100px;
     height: 380px;
     display: flex;
     align-items: center;
@@ -261,27 +265,7 @@ a button {
     .box {
         gap: 200px;
     }
-    .me {
-        margin-top: 240px;
-    }
-    .me img {
-        height: 380px;
-        width: 300px;
-    }
-    #home {
-        justify-content: center;
-    }
-    #home .intro{
-        justify-content: center;
-    } 
-    #about {
-        justify-content: center;
-        margin-right: 50px;
-        gap: 70px;
-    }
-    .avatar {
-        margin-right: 50px;
-    }
+
     #connect {
         justify-content: center;
     }
@@ -293,11 +277,14 @@ a button {
     }
 }
 
-@media screen and (max-width: 1400px) {
-    .me img {
-        height: 380px;
-        width: 300px;
+@media screen and (max-width: 1259px) {
+    .project1, .project2 {
+        gap: 5px;
     }
+}
+
+@media screen and (max-width: 1402px) {
+
     #projects{
         width: 100%;
         gap: 100px;
@@ -327,6 +314,25 @@ a button {
     #projects img {
         width: 370px;
         height: 270px;
+    }
+}
+
+@media screen and (max-width: 1688px) {
+    #home {
+        justify-content: center;
+    }
+    #home .intro{
+        justify-content: center;
+    } 
+}
+@media screen and (max-width: 1606px) {
+    #about {
+        justify-content: center;
+        margin-right: 50px;
+        gap: 70px;
+    }
+    .avatar {
+        margin-right: 50px;
     }
 }
 
